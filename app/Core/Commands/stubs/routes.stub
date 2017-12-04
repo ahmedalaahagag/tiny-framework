@@ -1,0 +1,6 @@
+
+//Dummy Routes
+$app->get('/dummy/{id}', ['DummyController', 'read']);
+$app->post('/dummy/create', ['DummyController', 'create']);
+$app->delete('/dummy/{id}', ['DummyController', 'delete']);
+$app->patch('/dummy', ['DummyController', 'update']);

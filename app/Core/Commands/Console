@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Entry point of the console command line
+ */
+require __DIR__ . '/../../../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$app = new Application();
+
+$app->add(new \App\Core\Commands\CreateCrudCommand());
+
+$app->run();

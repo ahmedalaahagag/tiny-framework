@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Controllers;
+
+class DummyController extends Controller
+{
+    private $DummyModel;
+    public function __construct(App $app)
+    {
+        parent::__construct($app);
+        $this->DummyModel = $this->builder()->on(Dummy::class);
+    }
+    public function read()
+    {
+    }
+    public function create()
+    {
+    }
+    public function delete()
+    {
+    }
+    public function update()
+    {
+    }
+}
