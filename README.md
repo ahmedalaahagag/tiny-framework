@@ -1,75 +1,93 @@
-# tiny-framework 
+# Tiny Framework (PHP)
 
-A light wight easy to use RESTful apis framework for education & demo purposes. stripped down framework to the fundamental components that that every one would essentially need to (learn / make a demo application).
+Light weight and easy to use RESTful api framework for education & demo purposes. stripped down to the fundamental components that every one would essentially need to (learn/create a demo application).
 
-Installation Instructions
+## Installation Instructions
 
-    1- Clone tiny-framwork
-    2- cd /path/to/app
-    3- run "composer update -o","composer du"
-    4- run the this command "php -S localhost:8080 -t public/" depends on your configuration
-    5- Create Database according to config file
-    
-# Features
-1- Service Container.
+```bash
+# Clone tiny-framwork
+https://github.com/ahmedalaahagag/tiny-framwork.git
 
-2- Routes.
+# Cd into the cloned repo
+cd tiny-framework
 
-3- Response (json). 
+# Run "composer update -o" then "composer du"
+composer update -o && composer du
 
-4- Session Handler.
+# Run the this command "php -S localhost:8080 -t public/", or change it according to your configuration
+php -S localhost:8080 -t public/
 
-5- Database (PDO driver).
-
-6- Command Line (Symfony Component).
-
-7- Dependency Injection.
-
-8- Models / Controllers.
-
-9- Class Mapping / Reflections.
-
-10- File Handler.
- 
-# Commands
-   1- Creates CRUD Controller / Model / Routes
+# Create a database according to the config file
 ```
- php tiny crud:make <name>
-```  
-# Run Unit Tests
- 
-```
- 1- cd /path/to/app 
- 2- run ./vendor/bin/phpunit or composer test 
- ```  
 
-# Missing Features 
+## Features
 
- 
- - Adding more db drivers
- - Adding front end integration / handling
- - Cover more test cases
- - More Commands (makes it easier to use the framework)
- - Adding DB migration files feature
+1 - Service Container.
 
-# Intro 
+2 - Routes.
+
+3 - Response (json).
+
+4 - Session Handler.
+
+5 - Database (PDO driver).
+
+6 - Command Line (Symfony Component).
+
+7 - Dependency Injection.
+
+8 - Models / Controllers.
+
+9 - Class Mapping / Reflections.
+
+10 - File Handler.
+
+## Where to get started
 
 Typically the entry point is public/index.php
 
-creates a new app object 
+creates a new app object
 
-from here you will find the framework bootstrapping 
+from here you will find the framework bootstrapping
 
-injecting the autoload and calling bootstrap/app.php 
+injecting the autoload and calling bootstrap/app.php
 
 form this point on the framework goes into action filling a service container
 
-reading the routes 
+reading the routes
 
-matching the requested route with the registered then get the controller and the requested function 
+matching the requested route with the registered then get the controller and the requested function
 
-# Special Thanks
+## Commands
+
+- Create CRUD Controller / Model / Routes
+
+```bash
+ php tiny crud:make <name>
+```
+
+## Run Unit Tests
+
+```bash
+cd /path/to/app && run ./vendor/bin/phpunit
+# or
+cd /path/to/app && composer test
+ ```
+
+## TODOs
+
+- [ ] Add more db drivers
+- [ ] Add frontend integration/handling
+- [ ] Cover more test cases
+- [ ] More Commands (makes it easier to use the framework)
+- [ ] Add DB migration files feature
+
+## Special Thanks to
+
 [Mahmoud Nassar](https://github.com/NassarX)
+
 [Mohamed Nagy](https://github.com/mohamednagy)
+
 [Ahmed Jamal](https://github.com/ahmed-jamal)
-For your support
+
+For their support
