@@ -69,5 +69,7 @@ reading the routes
 matching the requested route with the registered then get the controller and the requested function 
 
 # Special Thanks
-[a link](https://github.com/NassarX)
+[Mahmoud Nassar](https://github.com/NassarX)
+[Mohamed Nagy](https://github.com/mohamednagy)
+[Ahmed Jamal](https://github.com/ahmed-jamal)
 For your support
