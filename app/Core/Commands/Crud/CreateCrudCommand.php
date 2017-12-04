@@ -94,7 +94,7 @@ class CreateCrudCommand extends Command
     protected function terminateCreate($reason)
     {
 
-        $this->output->writeln('<error>creation terminated because :  ' . $reason . '</error>');
+        $this->output->writeln('<error>Operation Aborted:'.$reason.'</error>');
     }
 
     /**
@@ -104,7 +104,7 @@ class CreateCrudCommand extends Command
     {
         $controllerName = 'app/Controllers/' . $name . 'Controller.php';
         if (checkIfFileExists($controllerName)) {
-            $this->terminateCreate($controllerName . " exist");
+            $this->terminateCreate($controllerName . " already exist");
             die();
         } else
             file_put_contents($controllerName,
