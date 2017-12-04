@@ -5,10 +5,11 @@ A light wight easy to use RESTful apis framework for education & demo purposes. 
 Installation Instructions
 
     1- Clone tiny-framwork
-    1- cd /path/to/app
-    2- run "composer update -o","composer du"
-    3- run the this command "php -S localhost:8080 -t public/" depends on your configuration
-
+    2- cd /path/to/app
+    3- run "composer update -o","composer du"
+    4- run the this command "php -S localhost:8080 -t public/" depends on your configuration
+    5- Create Database according to config file
+    
 # Features
 1- Service Container.
 

@@ -5,7 +5,7 @@ return [
     'database' => [
         'driver' => 'mysql',
         'host' => 'localhost',
-        'database' => 'fearless',
+        'database' => 'tiny',
         'username' => 'root',
         'password' => 'root',
         'options' => [
