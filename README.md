@@ -67,3 +67,9 @@ form this point on the framework goes into action filling a service container
 reading the routes 
 
 matching the requested route with the registered then get the controller and the requested function 
+
+# Special Thanks
+[Mahmoud Nassar](https://github.com/NassarX)
+[Mohamed Nagy](https://github.com/mohamednagy)
+[Ahmed Jamal](https://github.com/ahmed-jamal)
+For your support
