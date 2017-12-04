@@ -9,8 +9,6 @@
   "require-dev": {
   },
   "scripts": {
-    "test": "./vendor/bin/phpunit",
-    "command": "./app/Commands/Console"
   },
   "autoload": {
     "classmap": [
