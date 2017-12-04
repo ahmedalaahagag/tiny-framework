@@ -1,4 +1,5 @@
-#tiny-framework 
+# tiny-framework 
+
 A light wight easy to use RESTful apis framework for education & demo purposes. stripped down framework to the fundamental components that that every one would essentially need to (learn / make a demo application).
 
 Installation Instructions
@@ -8,7 +9,7 @@ Installation Instructions
     2- run "composer update -o","composer du"
     3- run the this command "php -S localhost:8080 -t public/" depends on your configuration
 
-#Features
+# Features
 1- Service Container.
 
 2- Routes.
@@ -29,19 +30,19 @@ Installation Instructions
 
 10- File Handler.
  
-#Commands
+# Commands
    1- Creates CRUD Controller / Model / Routes
 ```
  ./app/Core/Commands/Console tiny:create-crud <name>
 ```  
-#Run Unit Tests
+# Run Unit Tests
  
 ```
  1- cd /path/to/app 
  2- run ./vendor/bin/phpunit or composer test 
  ```  
 
-#Missing Features 
+# Missing Features 
 
  
  - Adding more db drivers
