@@ -86,9 +86,6 @@ class App
      */
     public function run()
     {
-        $commands = new Application();
-
-        $commands->add(new CreateCrudCommand());
 
         $router = $this->container->router;
 
