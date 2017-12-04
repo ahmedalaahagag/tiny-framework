@@ -14,6 +14,8 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class CreateCrudCommand extends Command
 {
+    private $output;
+
     /**
      * Configures CreateCrudCommand
      * Gets the name of the needed CRUD Controller / Model / Routes
@@ -44,6 +46,8 @@ class CreateCrudCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $this->output = $output;
+
         $this->buildClass($input->getArgument('name'));
         $this->updateRoutes($input->getArgument('name'));
     }
@@ -55,12 +59,10 @@ class CreateCrudCommand extends Command
     protected function buildClass($name)
     {
         // Creates Controller
-        file_put_contents('app/Controllers/' . $name . 'Controller.php',
-            $this->replaceClass(getFileContents(__DIR__ . '/stubs/controller.stub'), $name));
+        $this->createController($name);
 
         // Creates Model
-        file_put_contents('app/Models/' . $name . '.php',
-            $this->replaceClass(getFileContents(__DIR__ . '/stubs/model.stub'), $name));
+        $this->createModel($name);
     }
 
     /**
@@ -89,4 +91,39 @@ class CreateCrudCommand extends Command
     }
 
 
+    protected function terminateCreate($reason)
+    {
+
+        $this->output->writeln('<error>creation terminated because :  ' . $reason . '</error>');
+    }
+
+    /**
+     * @param $name
+     */
+    protected function createController($name): void
+    {
+        $controllerName = 'app/Controllers/' . $name . 'Controller.php';
+        if (checkIfFileExists($controllerName)) {
+            $this->terminateCreate($controllerName . " exist");
+            die();
+        } else
+            file_put_contents($controllerName,
+                $this->replaceClass(getFileContents(__DIR__ . '/stubs/controller.stub'), $name));
+
+    }
+
+    /**
+     * @param $name
+     */
+    protected function createModel($name): void
+    {
+        $modelName = 'app/Models/' . $name . '.php';
+        if (checkIfFileExists($modelName)) {
+            $this->terminateCreate($modelName . " exist");
+            die();
+        } else
+            file_put_contents($modelName,
+                $this->replaceClass(getFileContents(__DIR__ . '/stubs/model.stub'), $name));
+
+    }
 }
