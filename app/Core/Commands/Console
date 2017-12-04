@@ -9,6 +9,6 @@ use Symfony\Component\Console\Application;
 
 $app = new Application();
 
-$app->add(new \App\Core\Commands\CreateCrudCommand());
+$app->add(new \App\Core\Commands\Crud\CreateCrudCommand());
 
 $app->run();

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Core\Commands;
+namespace App\Core\Commands\Crud;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
@@ -21,7 +22,7 @@ class CreateCrudCommand extends Command
     {
         $this
             // the name of the command (the part after "bin/console")
-            ->setName('tiny:create-crud')
+            ->setName('crud:make')
             // the short description shown while running "php bin/console list"
             ->setDescription('Creates a new crud.')
             // the full command description shown when running the command with
@@ -29,6 +30,7 @@ class CreateCrudCommand extends Command
             ->setHelp('This command allows you to create a crud controllers and model...')
             // configure an argument
             ->addArgument('name', InputArgument::REQUIRED, 'The name of the module.');
+
 
     }
 

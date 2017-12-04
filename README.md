@@ -34,7 +34,7 @@ Installation Instructions
 # Commands
    1- Creates CRUD Controller / Model / Routes
 ```
- ./app/Core/Commands/Console tiny:create-crud <name>
+ php tiny crud:make <name>
 ```  
 # Run Unit Tests
  
