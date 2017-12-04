@@ -78,3 +78,8 @@ function getWriteContents($path, $data)
         die($e->getMessage());
     }
 }
+
+function checkIfFileExists($filePath)
+{
+    return file_exists($filePath);
+}
