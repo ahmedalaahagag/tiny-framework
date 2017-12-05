@@ -9,4 +9,3 @@ $app->post('/user/create', ['UsersController', 'create']);
 $app->delete('/user/{id}', ['UsersController', 'delete']);
 $app->patch('/user', ['UsersController', 'update']);
 $app->get('/user/character', ['UsersController', 'character']);
-

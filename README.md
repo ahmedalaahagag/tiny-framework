@@ -42,6 +42,8 @@ php -S localhost:8080 -t public/
 
 10 - File Handler.
 
+11 - Api calls
+
 ## Where to get started
 
 Typically the entry point is public/index.php
@@ -65,7 +67,12 @@ matching the requested route with the registered then get the controller and the
 ```bash
  php tiny crud:make <name>
 ```
-
+- Create Api Call 
+```
+ php tiny api-call:make <ClassName>
+ ```
+ [![asciicast](https://asciinema.org/a/yq0QwKZk92wNoqfxHwiZm0fH4.png)](https://asciinema.org/a/yq0QwKZk92wNoqfxHwiZm0fH4)
+ 
 ## Run Unit Tests
 
 ```bash

@@ -1,0 +1,8 @@
+<?php
+use App\Core\Commands\ApiCall\ApiCallHandler;
+class dummy extends ApiCallHandler{
+ public $endPoint;
+    public $header = [];
+    public $body;
+    public $requestMethod = 'get';
+}
