@@ -14,4 +14,6 @@ $app->bind('database', function ($app) {
 
 $app->bind('session', [new \App\Core\Session(), 'start']);
 
-$app->bind('file', [new \App\Core\File(), 'start']);
+$app->bind('file', function(){
+    return new \App\Core\File();
+});
