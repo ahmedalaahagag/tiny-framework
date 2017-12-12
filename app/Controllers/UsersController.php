@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Core\App;
-use App\Models\Character;
 use App\Models\User;
 
 /**
@@ -13,7 +12,6 @@ use App\Models\User;
 class UsersController extends Controller
 {
     private $userModel;
-    private $characterModel;
 
     /**
      * UsersController constructor.
@@ -24,7 +22,6 @@ class UsersController extends Controller
     {
         parent::__construct($app);
         $this->userModel = $this->builder()->on(User::class);
-        $this->characterModel = $this->builder()->on(Character::class);
     }
 
     /**
@@ -84,24 +81,6 @@ class UsersController extends Controller
             return $this->app()->response()->json(["message" => "Account Deletion Failed"]);
         }
         return $this->app()->response()->json(["message" => "id is missing"]);
-    }
-
-    /**
-     * gets user created character
-     * @return mixed
-     */
-    public function character()
-    {
-        $user = $this->app()->session->get('fearless_user');
-        if ($user) {
-            $character = $this->characterModel->select(['user_id' => $user['id']]);
-            if ($character) {
-                $this->app()->session->set('fearless_character', $character);
-                return $this->app()->response()->json($character);
-            }
-            return $this->app()->response()->json(["message" => "No character for this user ! please create a character first"]);
-        }
-        return $this->app()->response()->json(["message" => "You must login first"]);
     }
 
     /**
