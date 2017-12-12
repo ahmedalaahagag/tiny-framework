@@ -17,7 +17,8 @@ composer update -o && composer du
 # Run the this command "php -S localhost:8080 -t public/", or change it according to your configuration
 php -S localhost:8080 -t public/
 
-# Create a database according to the config file
+# Create a database according to the config file or 
+import the given demo user table user.sql in database folder
 ```
 
 ## Features
