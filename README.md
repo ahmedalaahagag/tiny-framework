@@ -6,7 +6,7 @@ Light weight and easy to use RESTful api framework for education & demo purposes
 
 ```bash
 # Clone tiny-framwork
-https://github.com/ahmedalaahagag/tiny-framwork.git
+git clone https://github.com/ahmedalaahagag/tiny-framwork.git
 
 # Cd into the cloned repo
 cd tiny-framework
